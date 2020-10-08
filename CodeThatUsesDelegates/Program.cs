@@ -1,4 +1,6 @@
-﻿using System;
+﻿// A demostration of the use of delegates.
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
