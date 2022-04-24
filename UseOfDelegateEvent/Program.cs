@@ -12,14 +12,14 @@ namespace UseOfDelegateEvent
             me.Name = "Håkan";
             me.OnBirthDay = Celebrate;
             me.OnBirthDay += YearOfBirth;
-            me.YearIncreased();
+            me.IncreaseYear();
 
             Person you = new Person();
             you.Age = 59;
             you.Name = "Micke";
             you.OnBirthDay = Celebrate;
 
-            you.YearIncreased();
+            you.IncreaseYear();
         }
 
         static void Celebrate(Person p)

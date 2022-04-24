@@ -9,7 +9,7 @@ namespace PeopleClassLibary
 
         public Action<Person> OnBirthDay { get; set; }
 
-        public void YearIncreased()
+        public void IncreaseYear()
         {
             Age++;
             OnBirthDay(this);
