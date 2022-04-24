@@ -26,7 +26,24 @@ namespace EventDemo
                 new Person() { Name = "Andersson", Age = 25 },
             };
 
-            people.Sort(MyComparison);
+            //people.Sort(MyComparison); // Named method.
+            people.Sort((you, me) => // Lambda expression
+            {
+                if (string.Compare(you.Name, me.Name) < 0)
+                    return -1;
+                else
+                if (string.Compare(you.Name, me.Name) > 0)
+                    return 1;
+                else
+                        if (you.Age < me.Age)
+                    return -1;
+                else
+                    if (you.Age > me.Age)
+                    return 1;
+                else
+                    return 0;
+            }
+);
 
             foreach (Person i in people)
             {
